@@ -49,8 +49,8 @@ if __name__ == '__main__':
     #start serial com
     ser = serial.Serial(address,baud)
     ser.readline()  # Fix for Windows: read and discard first input
-    print 'iter, duration, time step'
-    print '-------------------------'
+    print('iter, duration, time step')
+    print('-------------------------')
 
     # Loop over multiple measurements
     # ===============================
@@ -59,7 +59,7 @@ if __name__ == '__main__':
         # Harvest the data from the Arduino
         series, duration = data_from_Arduino()
         
-        print i, duration, duration/N_points
+        print(i, duration, duration/N_points)
         
         # Auto-correlation calculation
         auto = autocorrelate(series)
